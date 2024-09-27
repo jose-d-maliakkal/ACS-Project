@@ -1,0 +1,11 @@
+{
+    "raw_data_path": "Data/Raw_data/Dataset (ATS)-1.csv",
+    "cleaned_data_path": "data/Cleaned_data/cleaned_dataset.csv",
+    "processed_data_path": "Data_Preparation/Processed_data/processed_data.csv",
+
+    "standard_scaled_path": "Data_Preparation/Scaling_techniques/standard_scaled_dataset.csv",
+    "min_max_scaled_path": "Data_Preparation/Scaling_techniques/min_max_scaled_dataset.csv",
+    
+    "training_set_path": "Data_Preparation/Train_data/train_dataset.csv",
+    "testing_set_path": "Data_Preparation/Test_sets/test_dataset.csv"
+}    
