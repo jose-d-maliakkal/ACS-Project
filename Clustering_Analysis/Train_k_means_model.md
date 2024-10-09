@@ -71,22 +71,21 @@ def apply_k_means(scaled_df_n_clusters, data, n_clusters):
 
 The following describes the characteristics of each cluster based on tenure and charges:
 
-| Position           | Cluster Number | Characteristics                        |
+| Position           | Cluster Number | Characteristics                       |
 |--------------------|----------------|---------------------------------------|
-| **Top-left**       | Cluster 0      | High tenure, mid-high charges         |
+| **Top-left**       | Cluster 0      | Low tenure, low charges               |
 | **Top-right**      | Cluster 1      | High tenure, high charges             |
-| **Bottom-left**    | Cluster 2      | Low tenure, low charges               |
-| **Bottom-right**   | Cluster 3      | Mid tenure, low-mid charges           |
+| **Bottom-left**    | Cluster 2      | Mid-high tenure, low-mid charges      |
+| **Bottom-right**   | Cluster 3      |High tenure, mid-high charges          |
 
 ## Customer Segmentation Analysis
 
 This plot could be part of a customer segmentation analysis. Clusters might represent different customer types based on how long they’ve been customers (tenure) and how much they pay (monthly charges):
 
-- **Cluster 0**: Customers with relatively short tenure and medium charges.
-- **Cluster 1**: Loyal, high-paying customers.
-- **Cluster 2**: New customers with low charges.
-- **Cluster 3**: Customers with moderate tenure and lower charges.
-
+- **Cluster 0**: Customers with short tenure and low charges. This group might represent new or         low-engagement customers who are not paying much and might require targeted marketing strategies to retain them.
+- **Cluster 1**: Loyal, high-paying customers with long tenure and high monthly charges. These are the most valuable customers.
+- **Cluster 2**: Customers with moderate tenure and low charges. This group is most at risk of churn since they have not been with the company long and are not heavily invested in high-value services.
+- **Cluster 3**: Long-term customers with mid-high charges. This group might represent stable customers who have been with the service for a long time and contribute to consistent revenue.
 
 This categorization helps in understanding the customer segments and tailoring marketing strategies accordingly.
 
