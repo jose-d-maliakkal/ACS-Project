@@ -25,7 +25,7 @@ standard_scaled_data_path = os.path.join(project_root, 'data_preparation', 'scal
 min_max_scaled_data_path = os.path.join(project_root, 'data_preparation', 'scaling_techniques', 'min_max_scaled_dataset.csv')
 train_path = os.path.join(project_root, 'Data_Preparation', 'Train_data', 'train_dataset.csv')
 test_path = os.path.join(project_root, 'Data_Preparation', 'Test_data', 'test_dataset.csv')
-scaled_n_cluster_data_path = os.path.join(project_root, 'Clustering_Analysis', 'scaled_n_cluster_dataset.csv')
+scaled_n_cluster_data_path = os.path.join(project_root, 'Clustering_Analysis', 'Data','scaled_n_cluster_dataset.csv')
 visualisations_path = os.path.join(project_root, 'Clustering_Analysis', 'visualisations')
 
 
@@ -123,12 +123,16 @@ def main():
     # 3. Feature Engineering
     print("\n3. Feature Engineering\n")
     df_features = feature_engineering(df_cleaned)
+    print("Displaying the dataset after feature engineering")
+    print(df_features)
     df_features.to_csv(processed_data_path, index=False)
     print(f"Saved dataset after feature engineering to {processed_data_path}")
 
     # 4. Scaling the data
     print("\n4. Scaling the data set\n")
     min_max_scaled_df = scale_data(df_features)
+    print("Dsiplaying the dataset after scaling")
+    print(min_max_scaled_df)
     min_max_scaled_df.to_csv(min_max_scaled_data_path, index=False)
     print(f"Saved Min-Max scaled data to {min_max_scaled_data_path}")
 
@@ -137,6 +141,11 @@ def main():
     train_df, test_df = split_data(df_features, target_column='Churn_Yes')
     train_df.to_csv(train_path, index=False)
     test_df.to_csv(test_path, index=False)
+
+    # Print the number of samples and features
+    print(f"Train Data: {train_df.shape[0]} samples, {train_df.shape[1]} features")
+    print(f"Test Data: {test_df.shape[0]} samples, {test_df.shape[1]} features")
+    
     print(f"Train data saved to {train_path}")
     print(f"Test data saved to {test_path}")
 

@@ -5,7 +5,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
-import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
