@@ -1,7 +1,7 @@
 # Visualisations of clusters on some cluster Characterstics
 
 ### Visualization 1: Cluster Visualization
-![Cluster Visualization](./optimal_clusters.png)
+![Cluster Visualization](../visualisations/optimal_clusters.png)
 
 ## Cluster Characteristics
 
@@ -26,7 +26,7 @@ This plot could be part of a customer segmentation analysis. Clusters might repr
 This categorization helps in understanding the customer segments and tailoring marketing strategies accordingly.
 
 ### Visualization 2: Average Monthly Charges by Cluster
-![Cluster Visualization](./average_monthly_charge.png)
+![Cluster Visualization](../visualisations/average_monthly_charge.png)
 
 ## Key Points:
 - **X-axis (Cluster)**: Each bar represents a cluster (0, 1, 2, 3), corresponding to the clusters identified.
@@ -41,7 +41,7 @@ These customers likely have relatively high monthly charges but might differ fro
 Clusters 1 and 3 represent higher-paying customers, while Clusters 0 and 2 likely contain customers with lower monthly charges.
 
 ### Visualization 2: Average Tenure by Cluster 
-![Cluster Visualization](./average_tenure.png)
+![Cluster Visualization](../visualisations/average_tenure.png)
 
 ## Key points
 - **X-axis (Cluster)**: Each bar represents a cluster (0, 1, 2, 3), corresponding to the clusters identified.
@@ -57,7 +57,7 @@ Clusters 1 and 3 represent higher-paying customers, while Clusters 0 and 2 likel
 The tenure chart suggests that while Clusters 1 and 2 have longer tenure, Cluster 1 stands out as the group with the highest tenure and charges. Cluster 0 has the shortest tenure, confirming it contains the newest customers.
 
 ### Visualization 2: Cluster Distribution 
-![Cluster Visualization](./cluster_distribution.png)
+![Cluster Visualization](../visualisations/cluster_distribution.png)
 
 ## Key points
 - **X-axis (Cluster)**: Each bar represents a cluster (0, 1, 2, 3), corresponding to the clusters identified.

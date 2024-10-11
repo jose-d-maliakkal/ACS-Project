@@ -32,7 +32,7 @@ The Elbow Method is a heuristic used to determine the number of clusters in a da
 
 ### Elbow Method Visualization
 
-![Elbow Method Visualization](./visualisations/elbow_plot.png)
+![Elbow Method Visualization](../visualisations/elbow_plot.png)
 
 In the plot above, the WCSS decreases as the number of clusters increases. The "elbow" point occurs at **k = 4**, indicating that adding more clusters beyond this point yields diminishing returns in terms of reduced WCSS.
 

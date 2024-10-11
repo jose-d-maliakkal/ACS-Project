@@ -65,7 +65,7 @@ def apply_k_means(scaled_df_n_clusters, data, n_clusters):
 
 
 ### Cluster Visualizations
-![Cluster Visualization](./visualisations/optimal_clusters.png)
+![Cluster Visualization](../visualisations/optimal_clusters.png)
 
 ## Cluster Characteristics
 
