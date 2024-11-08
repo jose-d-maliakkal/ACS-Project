@@ -7,5 +7,12 @@
     "min_max_scaled_path": "Data_Preparation/Scaling_techniques/min_max_scaled_dataset.csv",
     
     "training_set_path": "Data_Preparation/Train_data/train_dataset.csv",
-    "testing_set_path": "Data_Preparation/Test_sets/test_dataset.csv"
+    "testing_set_path": "Data_Preparation/Test_sets/test_dataset.csv",
+    "ANN_Model_path": "Predictive_Modeling/ANN_Model/save/architecture",
+    "trained_model_path": "Predictive_Modeling/ANN_Model/save/model",
+    "scaled_train_data_path": "Data_Preparation/Scaling_techniques/min_max_scaled_dataset.csv",
+    "scaled_test_data_path": "Data_Preparation/Scaling_techniques/min_max_scaled_dataset.csv",
+    "results_path": "Predictive_Modeling/ANN_Model/save/results",
+    "Visualization_path": "Predictive_Modeling/ANN_Model/save/Visualization"
+      
 }    
