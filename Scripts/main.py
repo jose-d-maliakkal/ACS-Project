@@ -6,7 +6,7 @@ from sklearn.cluster import KMeans
 
 
 # Load utils and Scripts directories
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'utils'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'Utils'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'Scripts'))
 
 # Load the configuration from config.json
