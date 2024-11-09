@@ -6,8 +6,16 @@ from sklearn.cluster import KMeans
 
 
 # Load utils and Scripts directories
+<<<<<<< HEAD
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'Utils'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'Scripts'))
+=======
+current_dir = os.path.dirname(__file__)
+sys.path.append(os.path.join(current_dir, '..', 'Utils'))
+sys.path.append(os.path.join(current_dir, '..', 'Scripts'))
+
+
+>>>>>>> fee3e5259ea6747409534c49a9bb014cb50391e5
 
 # Load the configuration from config.json
 config_json_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'config.json')
@@ -41,7 +49,7 @@ def load_raw_data(file_path):
 
 def clean_data(df):
     """Clean the data using the data_cleaning function."""
-    from clean import data_cleaning
+    from cleaning import data_cleaning
     cleaned_df = data_cleaning(df)
     if cleaned_df is not None:
         print("Dataset cleaned successfully.")
@@ -63,7 +71,7 @@ def feature_engineering(df):
 
 def scale_data(df):
     """Scale the dataset using Standard and Min-Max scaling."""
-    from scaling import  Min_Max_Scaling
+    from scaling_data import  Min_Max_Scaling
 
     # Min-Max Scaling
     min_max_scaled_df = Min_Max_Scaling(df)
@@ -122,7 +130,7 @@ def main():
 
     # 3. Feature Engineering
     print("\n3. Feature Engineering\n")
-    df_features = feature_engineering(df_cleaned)
+    df_features = feature_engineering(df)
     print("Displaying the dataset after feature engineering")
     print(df_features)
     df_features.to_csv(processed_data_path, index=False)
@@ -131,7 +139,7 @@ def main():
     # 4. Scaling the data
     print("\n4. Scaling the data set\n")
     min_max_scaled_df = scale_data(df_features)
-    print("Dsiplaying the dataset after scaling")
+    print("Displaying the dataset after scaling")
     print(min_max_scaled_df)
     min_max_scaled_df.to_csv(min_max_scaled_data_path, index=False)
     print(f"Saved Min-Max scaled data to {min_max_scaled_data_path}")
@@ -152,6 +160,9 @@ def main():
     # 6. Clustering Analysis
     print("\n6. Clustering Analysis\n")
     perform_clustering(min_max_scaled_df)
+
+    # 7. Predictive Analysis
+    
 
 
 if __name__ == "__main__":
