@@ -28,11 +28,11 @@ This project analyzes the data of a telecom company and  delve deep into client 
 │   ├── 📁 Train_data/
 │   │   ├── 📄 train_dataset.xlsx
 ├── 📁 Predictive_Modeling/
-│   ├── 📁 Visualisation
+│   ├── 📁 Visualisation/
 │   ├── 📁 architecture/
 │   ├── 📁 model/
 │   ├── 📁 results/
-│   ├── 📄 ANN_model_architecture_documentation.pdf/
+│   ├── 📄 ANN_model_architecture_documentation.pdf
 ├── 📁 scripts/
 │   ├── 📄 clustering_analysis.py
 │   ├── 📄 feature_engineering.py
