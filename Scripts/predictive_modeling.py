@@ -56,7 +56,7 @@ Visualization_path = os.path.join(base_dir, config['Visualization_path'])
 # Load the pre-scaled dataset
 scaled_train_data = pd.read_csv(scaled_train_data_path)
 
-# Determine input dimensions based on provided dataset (excluding target columns)
+# Separate features and target column.
 feature_columns = scaled_train_data.drop(columns=['Churn_No', 'Churn_Yes']).shape[1]
 input_dim = feature_columns
 
