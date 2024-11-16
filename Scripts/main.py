@@ -6,16 +6,14 @@ from sklearn.cluster import KMeans
 
 
 # Load utils and Scripts directories
-<<<<<<< HEAD
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'Utils'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'Scripts'))
-=======
+
 current_dir = os.path.dirname(__file__)
 sys.path.append(os.path.join(current_dir, '..', 'Utils'))
 sys.path.append(os.path.join(current_dir, '..', 'Scripts'))
 
 
->>>>>>> fee3e5259ea6747409534c49a9bb014cb50391e5
 
 # Load the configuration from config.json
 config_json_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'config.json')
@@ -49,7 +47,7 @@ def load_raw_data(file_path):
 
 def clean_data(df):
     """Clean the data using the data_cleaning function."""
-    from cleaning import data_cleaning
+    from Utils.cleaning import data_cleaning
     cleaned_df = data_cleaning(df)
     if cleaned_df is not None:
         print("Dataset cleaned successfully.")
@@ -71,7 +69,7 @@ def feature_engineering(df):
 
 def scale_data(df):
     """Scale the dataset using Standard and Min-Max scaling."""
-    from scaling_data import  Min_Max_Scaling
+    from Utils.scaling_data import  Min_Max_Scaling
 
     # Min-Max Scaling
     min_max_scaled_df = Min_Max_Scaling(df)

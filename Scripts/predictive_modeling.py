@@ -5,10 +5,10 @@ import random
 import numpy as np
 import pandas as pd
 import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping 
+from tensorflow.keras.models import Sequential # type: ignore
+from tensorflow.keras.layers import Dense, Dropout # type: ignore
+from tensorflow.keras.optimizers import Adam # type: ignore
+from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping  # type: ignore
 import matplotlib.pyplot as plt
 from tensorflow.keras.models import load_model # type: ignore
 import seaborn as sns
@@ -151,7 +151,11 @@ plt.title('Model accuracy')
 plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
 plt.legend(['Train', 'Validation'], loc='upper left')
-plt.show()
+plt.savefig(os.path.join(Visualization_path, 'Model-Accuracy.png.png'))  # Corrected path
+plt.close()
+
+print(f"Model Accuracy saved to {os.path.join(Visualization_path, 'Model_Accuracy.png')}")
+
 
 # Plot training & validation loss values
 plt.plot(history.history['loss'])
@@ -160,8 +164,10 @@ plt.title('Model loss')
 plt.ylabel('Loss')
 plt.xlabel('Epoch')
 plt.legend(['Train', 'Validation'], loc='upper left')
-plt.show()
+plt.savefig(os.path.join(Visualization_path, 'Model_Loss.png'))  # Corrected path
+plt.close()
 
+print(f"Model Loss saved to {os.path.join(Visualization_path, 'Model_Loss.png')}")
 
 # Load the trained model
 model = load_model(os.path.join(trained_model_path, 'best_model.keras'))
@@ -189,6 +195,8 @@ plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.savefig(os.path.join(Visualization_path, 'confusion_matrix.png'))  # Corrected path
 plt.close()
+
+print(f"Confusion Matrix saved to {os.path.join(Visualization_path, 'confusion_matrix.png')}")
 
 # Classification report
 class_report = classification_report(y_test, y_pred)
@@ -223,4 +231,3 @@ plt.savefig(os.path.join(Visualization_path, 'precision_recall_curve.png'))  # C
 plt.close()
 
 print(f"Precision-Recall curve saved to {os.path.join(Visualization_path, 'precision_recall_curve.png')}")
-
