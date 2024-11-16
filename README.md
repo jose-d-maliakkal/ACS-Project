@@ -115,6 +115,12 @@ Use config.json to ensure paths are correctly set to your project directory stru
     ```
     By calling this function, we identify the optimal number of cluster using the elbow method and then train the kmean model on this dataset using the identified optimal cluster. The resulting clusters and then visualised based on the cluster characterstics.
 
+ 7. Predictive Modelling
+
+    By running the predictive_modelling.py script we specify the architecture of the ANN model, including the input, hidden, and output layers optimised for predictive performance and train the ANN model using the dataset. We then utilise this trained ANN model to predict customer churn based on critical customer attributes. 
+
+
+
 ## Tasks Completed
 
 ### Data Engineering
@@ -140,7 +146,15 @@ Use config.json to ensure paths are correctly set to your project directory stru
  3. **Visualizing Clusters**:
      - Visualizations on cluster characterstics saved to `Clustering_Analysis/visualizations`.
 
+### Data Analysis ( Predictive Modelling)
+ 1. ** Defining the Architecture of ANN Model**:
+
+ 2. **Trained ANN Model on Provided Dataset**:
+
+ 3. **Predicted Customer Churn and Evaluated Model Performance**:
+      - Visualizations on performance evaluation tools saved to `Predictive_Modelling/Visualizations`.
+
 
 ## Overall Summary
 
-The project successfully completed the data engineering phase and clustering analysis phase of the project. Next phase of the projet is the predictive modelling to determine the customer churn and evaluate the model performance. 
+The project successfully completed the data engineering phase, clustering analysis and predictive modelling phase of the project. 
